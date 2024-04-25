@@ -14,34 +14,41 @@ MonoBehaviour:
   id: MusicManager
   title: Music Manager
   author: ashthebash
-  description: 'Music Manager is a mod that allows you to customize the music that
+  description: "Music Manager is a mod that allows you to customize the music that
     is played within the game.\r\n\r\nThis mod was originally developed by ashthebash,
     and is now maintained by me.\r\n\r\n[h1]Mod Settings[/h1]\r\nCurrently, the only
     way to add custom music to the game is via the mod settings config file, which
     follows the current structure:\r\n[code]\r\n{\r\n    \"Setup\":\r\n    {\r\n        //Can
-    specify tracks one-by-one in an array\r\n        \"Tracks\":\r\n        [\r\n            \"C:/Path/To/My/Music.ogg\",\r\n            \"C:/Path/To/My/Music2.wav\",\r\n        ],\r\n        //Or
-    specify a folder containing all the tracks\r\n        \"TracksFolder\": \"C:/Path/To/My/Tracks\",\r\n        \"AllowDefaults\":
-    true\r\n    },\r\n    \"Gameplay\":\r\n    {\r\n        \"Playlists\":\r\n        [\r\n            {\r\n                //Can
-    specify tracks one-by-one in an array\r\n                \"Tracks\":\r\n                [\r\n                    \"C:/Path/To/My/PhaseOneMusic.ogg\",\r\n                    \"C:/Path/To/My/PhaseTwoMusic.ogg\",\r\n                    \"C:/Path/To/My/PhaseThreeMusic.ogg\",\r\n                    \"C:/Path/To/My/FinalPhaseMusic.ogg\",\r\n                ],\r\n                //Or
-    specify a folder containing all the tracks\r\n                \"TracksFolder\":
-    \"C:/Path/To/My/Tracks\",\r\n                \"Name\": \"MyGameplayPlaylist\"\r\n            }\r\n        ],\r\n        \"AllowDefaults\":
+    specify tracks one-by-one in an array\r\n        \"Tracks\":\r\n        [\r\n
+    \           \"C:/Path/To/My/Music.ogg\",\r\n            \"C:/Path/To/My/Music2.wav\",\r\n
+    \       ],\r\n        //Or specify a folder containing all the tracks\r\n        \"TracksFolder\":
+    \"C:/Path/To/My/Tracks\",\r\n        \"AllowDefaults\": true\r\n    },\r\n    \"Gameplay\":\r\n
+    \   {\r\n        \"Playlists\":\r\n        [\r\n            {\r\n                //Can
+    specify tracks one-by-one in an array\r\n                \"Tracks\":\r\n                [\r\n
+    \                   \"C:/Path/To/My/PhaseOneMusic.ogg\",\r\n                    \"C:/Path/To/My/PhaseTwoMusic.ogg\",\r\n
+    \                   \"C:/Path/To/My/PhaseThreeMusic.ogg\",\r\n                    \"C:/Path/To/My/FinalPhaseMusic.ogg\",\r\n
+    \               ],\r\n                //Or specify a folder containing all the
+    tracks\r\n                \"TracksFolder\": \"C:/Path/To/My/Tracks\",\r\n                \"Name\":
+    \"MyGameplayPlaylist\"\r\n            }\r\n        ],\r\n        \"AllowDefaults\":
     true\r\n    },\r\n    \"PostGameWin\":\r\n    {\r\n        //Can specify tracks
-    one-by-one in an array\r\n        \"Tracks\":\r\n        [\r\n            \"C:/Path/To/My/Music.ogg\",\r\n            \"C:/Path/To/My/Music2.wav\",\r\n        ],\r\n        //Or
-    specify a folder containing all the tracks\r\n        \"TracksFolder\": \"C:/Path/To/My/Tracks\",\r\n        \"AllowDefaults\":
-    true\r\n    },\r\n    \"PostGameLose\":\r\n    {   \r\n        //Can specify tracks
-    one-by-one in an array\r\n        \"Tracks\":\r\n        [\r\n            \"C:/Path/To/My/Music.ogg\",\r\n            \"C:/Path/To/My/Music2.wav\",\r\n        ],\r\n        //Or
-    specify a folder containing all the tracks\r\n        \"TracksFolder\": \"C:/Path/To/My/Tracks\",\r\n        \"AllowDefaults\":
-    true\r\n    }\r\n}\r\n[/code]\r\n[list]\r\n    [*]The only allowed filetypes currently
-    are [b]*.wav[/b] and [b]*.ogg[/b].\r\n    [*]There can be any number of tracks
-    per gameplay playlist, as time is equally divided up for each phase, barring the
-    last phase, which always conincides with 30 seconds remaining on the bomb timer.\r\n    [*]In
-    order to force your custom music selection to be used and not the regular game
-    music tracks, set the appropriate [i]\"AllowDefaults\"[/i] field to [b]false[/b].\r\n    [*]You
-    don''t need to declare tracks for all music types if you don''t want to; just
-    leave the \"Tracks\" array empty for the appropriate music type.\r\n    [*]If
-    specifying tracks by [i]\"TracksFolder\"[/i], the tracks will be added to the
-    playlist in filename alphabetical order.\r\n    [*]Only specify one of [i]\"Tracks\"[/i]
-    or [i]\"TracksFolder\"[/i] for each music type.\r\n[/list]\r'
+    one-by-one in an array\r\n        \"Tracks\":\r\n        [\r\n            \"C:/Path/To/My/Music.ogg\",\r\n
+    \           \"C:/Path/To/My/Music2.wav\",\r\n        ],\r\n        //Or specify
+    a folder containing all the tracks\r\n        \"TracksFolder\": \"C:/Path/To/My/Tracks\",\r\n
+    \       \"AllowDefaults\": true\r\n    },\r\n    \"PostGameLose\":\r\n    {   \r\n
+    \       //Can specify tracks one-by-one in an array\r\n        \"Tracks\":\r\n
+    \       [\r\n            \"C:/Path/To/My/Music.ogg\",\r\n            \"C:/Path/To/My/Music2.wav\",\r\n
+    \       ],\r\n        //Or specify a folder containing all the tracks\r\n        \"TracksFolder\":
+    \"C:/Path/To/My/Tracks\",\r\n        \"AllowDefaults\": true\r\n    }\r\n}\r\n[/code]\r\n[list]\r\n
+    \   [*]The only allowed filetypes currently are [b]*.wav[/b] and [b]*.ogg[/b].\r\n
+    \   [*]There can be any number of tracks per gameplay playlist, as time is equally
+    divided up for each phase, barring the last phase, which always conincides with
+    30 seconds remaining on the bomb timer.\r\n    [*]In order to force your custom
+    music selection to be used and not the regular game music tracks, set the appropriate
+    [i]\"AllowDefaults\"[/i] field to [b]false[/b].\r\n    [*]You don't need to declare
+    tracks for all music types if you don't want to; just leave the \"Tracks\" array
+    empty for the appropriate music type.\r\n    [*]If specifying tracks by [i]\"TracksFolder\"[/i],
+    the tracks will be added to the playlist in filename alphabetical order.\r\n    [*]Only
+    specify one of [i]\"Tracks\"[/i] or [i]\"TracksFolder\"[/i] for each music type.\r\n[/list]"
   version: 0.1.3
   outputFolder: build
   previewImage: {fileID: 2800000, guid: c332f13f62634e44b9a1719c436d13f4, type: 3}
