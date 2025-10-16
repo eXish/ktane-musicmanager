@@ -33,7 +33,7 @@ public class MusicManagerService : MonoBehaviour
 
 	private void OnStateChange(KMGameInfo.State state)
 	{
-		if (state == null)
+		if (state == KMGameInfo.State.Gameplay)
 		{
 			ModMusicManager.OnEnterGameplay();
 		}
